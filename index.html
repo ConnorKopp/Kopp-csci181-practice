@@ -2,12 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Practice Home Page</title>
   </head>
   <body>
-    <header>
-      <img src="./images/Logo.ck.jpg" width="48" height="48" />
+    <header id="page-header">
+      <img
+        src="./images/Logo.ck.jpg"
+        width="48"
+        height="48"
+        alt="Personal Logo"
+      />
       <nav>
         <ul>
           <!--bug log
@@ -23,7 +29,14 @@
       </nav>
     </header>
     <main>
-      <h1>Home</h1>
+      <section class="hero">
+        <div class="hero-content" title="A snowy landscape, by Connor Kopp">
+          <p class="display-text" id="display-text">
+            Thoughtful ideas · Reliable code · Simple solutions
+          </p>
+          <button>View My work</button>
+        </div>
+      </section>
     </main>
   </body>
 </html>
