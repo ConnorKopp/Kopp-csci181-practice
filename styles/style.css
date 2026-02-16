@@ -29,26 +29,6 @@ html {
   }
 }
 
-input,
-textarea,
-select,
-button {
-  font: inherit;
-  border-radius: 8px;
-}
-button {
-  cursor: pointer;
-  border: none;
-  padding: 0.5rem 1rem;
-}
-button:hover {
-  background-color: #547598;
-  color: white;
-}
-button:active {
-  background-color: #2c3e50;
-  color: white;
-}
 /* Standard text definitions */
 p,
 h1,
@@ -167,6 +147,28 @@ form {
   margin: 1rem;
   padding: 1rem;
 }
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  border-radius: 8px;
+}
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+button:hover {
+  background-color: #547598;
+  color: white;
+}
+button:active {
+  background-color: #2c3e50;
+  color: white;
+}
+
 input[type="submit"] {
   background-color: #45617c;
   color: white;
@@ -206,6 +208,8 @@ select {
 
 /*Home Header*/
 #page-header {
+  position: sticky;
+  top: 0;
   background-color: #2c3e50;
   padding: 1rem 2rem;
 }
@@ -241,7 +245,11 @@ select {
 
 /*Resume Header*/
 #page-header-resume {
+  position: sticky;
+  top: 0;
+  background-color: hsl(0, 0%, 100%);
   padding: 1rem 2rem;
+  border-bottom: 3px solid #3498db;
 }
 #page-header-resume nav ul {
   list-style: none; /* remove default bullets */
@@ -272,6 +280,25 @@ select {
   height: 50px;
   width: auto;
   vertical-align: middle;
+}
+
+/*Projects Section*/
+
+.project-card {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #f9f9f9;
+}
+.project-card a {
+  margin-top: 0;
+  color: black;
+  text-decoration: none;
+}
+.project-card a:hover {
+  margin-top: 0;
+  color: #0c76be;
 }
 
 /*hero section*/
