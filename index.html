@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Practice Home Page</title>
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <header id="page-header">
       <img
         src="./images/Logo.ck.jpg"
@@ -30,7 +31,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="flex-1">
       <section class="hero">
         <div class="hero-content" title="A snowy landscape, by Connor Kopp">
           <p class="display-text" id="display-text">
@@ -41,7 +42,7 @@
       </section>
     </main>
     <h2>Projects</h2>
-    <section>
+    <section class="flex-2">
       <div class="project-card">
         <h3><a href="index.html">Personal Portfolio</a></h3>
         <p>A personal portfolio website showcasing my projects and skills.</p>
@@ -59,5 +60,110 @@
         </p>
       </div>
     </section>
+    <h2>Testimonials</h2>
+    <section class="flex-3 max-w-7xl mx-auto px-4">
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <li class="flex-1 bg-slate-50 shadow-lg rounded-xl p-4">
+          <figure class="flex flex-col h-full">
+            <blockquote class="relative pl-2 pt-7 flex-grow">
+              <svg
+                class="absolute -left-5 top-0 h-15 w-15 scale-x-[-1] opacity-5"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M10 8v8H6v6h6V8h-2zm12 0v8h-4v6h6V8h-2z"></path>
+              </svg>
+              <p class="text-lg text-gray-500 italic leading-tight">
+                CSCI 181 completely changed how i<br />
+                think about the internet. I finally<br />
+                understand the 'magic' behind the <br />
+                websites i use every day.
+              </p>
+            </blockquote>
+            <figcaption class="flex items-center pl-10 gap-0">
+              <img
+                class="rounded-full gap-0 -mr-4"
+                src="./images/Testimonials/jurica-koletic-.jpg"
+                width="50"
+                alt=""
+              />
+              <div class="flex flex-col leading-tight">
+                <p class="m-0 text-lg">Jurica Koletic</p>
+                <p class="m-0 text-gray-500">Freshman, Computer Science</p>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="flex-1 bg-slate-50 shadow-lg rounded-xl p-4">
+          <figure class="flex flex-col h-full">
+            <blockquote class="relative pl-2 pt-7 flex-grow">
+              <svg
+                class="absolute -left-5 top-0 h-15 w-15 scale-x-[-1] opacity-5"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M10 8v8H6v6h6V8h-2zm12 0v8h-4v6h6V8h-2z"></path>
+              </svg>
+              <p class="text-lg text-gray-500 italic leading-tight">
+                Now i have the confidence to build <br />
+                my own website. The instructor was<br />
+                really supportive and the material was<br />
+                always relevant.
+              </p>
+            </blockquote>
+            <figcaption class="flex items-center pl-10 pb-3 gap-0">
+              <img
+                class="rounded-full gap-0 -mr-4"
+                src="./images/Testimonials/ryan-hoffman.jpg"
+                width="50"
+                alt=""
+              />
+              <div class="flex flex-col leading-tight">
+                <p class="m-0 text-lg">Ryan Hoffman</p>
+                <p class="m-0 text-gray-500">Freshman, Software Engineering</p>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="flex-1 bg-slate-50 shadow-lg rounded-xl p-4">
+          <figure class="flex flex-col h-full">
+            <blockquote class="relative pl-2 pt-7 flex-grow">
+              <svg
+                class="absolute -left-5 top-0 h-15 w-15 scale-x-[-1] opacity-5"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M10 8v8H6v6h6V8h-2zm12 0v8h-4v6h6V8h-2z"></path>
+              </svg>
+              <p class="text-lg text-gray-500 italic leading-tight">
+                I leared so much about the principles<br />
+                of design and useablility. I didn't know<br />
+                coding could be so fun and creative!
+              </p>
+            </blockquote>
+            <figcaption class="flex items-center pl-10 pb-3 gap-0">
+              <img
+                class="rounded-full gap-0 -mr-4"
+                src="./images/Testimonials/willian-souza-.jpg"
+                width="50"
+                alt=""
+              />
+              <div class="flex flex-col leading-tight">
+                <p class="m-0 text-lg">Willian Souza</p>
+                <p class="m-0 text-gray-500">Junior, Media Arts</p>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <p class="text-sm text-gray-500">
+        &copy; 2026 Connor Kopp. All rights reserved.
+      </p>
+    </footer>
   </body>
 </html>
