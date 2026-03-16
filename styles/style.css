@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 /*
 Global Styles etc.
 */
@@ -31,6 +30,16 @@ Global Styles etc.
     line-height: 1.5rem;
     font-family: "Times New Roman", Times, serif;
     -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      animation-delay: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   /*
@@ -110,6 +119,21 @@ Standard text definitions
     font-family:
       "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
+}
+
+/*
+skip link
+*/
+.skip-link {
+  position: absolute !important;
+  top: -40px;
+  left: 0;
+  background: #3498db;
+  color: white;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
 }
 
 /*
@@ -231,7 +255,7 @@ Display Text
 }
 
 /*
-Home Header
+main Header
 */
 
 #page-header {
@@ -263,7 +287,12 @@ Home Header
 }
 
 #page-header nav ul li a:hover {
-  color: #3498db; /* hover color */
+  color: #3eb2ff; /* hover color */
+}
+
+#page-header nav a[aria-current="page"] {
+  color: #3eb2ff; /* active page color */
+  text-decoration: underline; /* underline active page */
 }
 
 #page-header img {
@@ -315,6 +344,14 @@ Resume Header
   width: auto;
   vertical-align: middle;
   border-radius: 6px;
+}
+#page-header-resume nav a[aria-current="page"] {
+  color: #236896; /* active page color */
+  text-decoration: underline; /* underline active page */
+}
+#page-header-resume nav a[aria-current="page"]:hover {
+  color: #236896;
+  text-decoration: underline;
 }
 
 /*
