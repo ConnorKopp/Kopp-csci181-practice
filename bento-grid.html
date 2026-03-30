@@ -22,6 +22,9 @@
         border-radius: 16px;
         object-fit: cover;
         height: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .grid-item img {
         border-radius: 16px;
@@ -30,18 +33,6 @@
         height: 100%;
         object-fit: cover;
         display: block;
-      }
-      .span-2-col {
-        grid-column: span 2;
-      }
-      .span-2-row {
-        grid-row: span 2;
-        height: 30.65rem;
-      }
-      .grid-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
       .grid-item.center {
@@ -58,6 +49,13 @@
         font-size: 3rem;
         font-family: "Fascinate Inline", system-ui;
       }
+      .span-2-col {
+        grid-column: span 2;
+      }
+      .span-2-row {
+        grid-row: span 2;
+        height: 30.65rem;
+      }
     </style>
   </head>
   <body>
@@ -70,56 +68,56 @@
     </nav>
     <main class="bento-wrapper">
       <section class="bento-grid">
-        <div class="grid-item">
+        <article class="grid-item">
           <img
             src="./images/Images_Bento/tourus-teapot.png"
             alt="A blue teapot in the shape of a tourus"
           />
-        </div>
-        <div class="grid-item">
+        </article>
+        <article class="grid-item">
           <img
             src="./images/Images_Bento/crystal.png"
-            alt="A yellow crystal glazed pot"
+            alt="A yellow crystal-glazed pot"
           />
-        </div>
-        <div class="grid-item span-2-col">
+        </article>
+        <article class="grid-item span-2-col">
           <img
             src="./images/Images_Bento/crystal-small.png"
-            alt="A small green and brown crystal pot"
+            alt="A small green and brown crystal-glazed pot"
           />
-        </div>
-        <div class="grid-item span-2-row">
+        </article>
+        <article class="grid-item span-2-row">
           <img
             src="./images/Images_Bento/pot.png"
-            alt="a pink and blue pot flowerpot"
+            alt="a pink and blue flowerpot"
           />
-        </div>
-        <div class="grid-item span-2-col center">
+        </article>
+        <article class="grid-item span-2-col center">
           <img
             class="center-img"
             src="./images/Images_Bento/ceramic-pottery-clip-art-.png"
-            alt="Computer Icons Ceramic Pottery , amphora transparent background PNG clipart"
+            alt="Computer Icons Ceramic Pottery, amphora transparent background PNG clipart"
           />
           <h1>Ceramics</h1>
-        </div>
-        <div class="grid-item">
+        </article>
+        <article class="grid-item">
           <img
             src="./images/Images_Bento/mug-blue.png"
             alt="A blue mug with an hourglass shape"
           />
-        </div>
-        <div class="grid-item span-2-col">
+        </article>
+        <article class="grid-item span-2-col">
           <img
             src="./images/Images_Bento/mug.png"
-            alt="A blue and purple mug with a dripping design"
+            alt="A blue and purple colored mug with a dripping design"
           />
-        </div>
-        <div class="grid-item">
+        </article>
+        <article class="grid-item">
           <img
             src="./images/Images_Bento/coin-jar.png"
             alt="A ceramic coin jar with a blue color"
           />
-        </div>
+        </article>
       </section>
     </main>
   </body>
