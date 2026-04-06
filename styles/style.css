@@ -3,13 +3,42 @@
 Global Styles etc.
 */
 @layer base {
+  :root {
+    --text-body: #000;
+    --text-heading: #000;
+    --background: aliceblue;
+    --card-color: #f9f9f9;
+    --card-background: #f9f9f9;
+    --table-top-bg: #34495e;
+    --resume-header-bg: #ffffff;
+    --resume-header-text: #000000;
+    --resume-current-page: #236896;
+    --textarea-background: #fff;
+    --header-border: #34495e;
+  }
+
+  body.dark {
+    --text-body: #ecf0f1;
+    --text-heading: #ecf0f1;
+    --background: #2c3e50;
+    --card-color: #34495e;
+    --card-background: #34495e;
+    --color-slate-50: #798284;
+    --color-gray-500: #ffffff;
+    --table-top-bg: #0c2d4f;
+    --resume-header-bg: #2c3e50;
+    --resume-header-text: #ecf0f1;
+    --resume-current-page: #369de1;
+    --textarea-background: #45617c;
+    --header-border: #ffffff;
+  }
+
   html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    background-color: aliceblue;
   }
 
   *,
@@ -24,8 +53,9 @@ Global Styles etc.
   }
 
   body {
+    background-color: var(--background);
     min-height: 100vh;
-    color: black;
+    color: var(--text-body);
     font-size: 1rem;
     line-height: 1.5rem;
     font-family: "Times New Roman", Times, serif;
@@ -64,7 +94,7 @@ Standard text definitions
   h4,
   h5,
   h6 {
-    color: black;
+    color: var(--text-body);
     font-family: inherit;
     text-wrap: balance;
   }
@@ -79,7 +109,7 @@ Standard text definitions
     font-size: 2rem;
     margin-bottom: 0.75rem;
     padding: 2rem;
-    background: #2c3e50;
+    background: var(--table-top-bg);
     border-radius: 8px;
     color: white;
     font-family: Arial, sans-serif;
@@ -115,7 +145,7 @@ Standard text definitions
     list-style-type: disc; /* normal filled circles */
     padding-left: 4rem; /* indent so bullets are visible */
     margin-bottom: 1rem;
-    color: #000;
+    color: var(--text-body);
     font-family:
       "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
@@ -148,7 +178,7 @@ td {
   border-collapse: collapse;
 }
 th {
-  background-color: #2c3e50;
+  background-color: var(--table-top-bg);
   color: white;
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
@@ -156,7 +186,7 @@ th {
   font-size: 1.2rem;
 }
 td {
-  color: black;
+  color: var(--text-body);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: medium;
 }
@@ -170,7 +200,7 @@ caption {
   font-size: 2rem;
   margin-bottom: 0.75rem;
   padding: 2rem;
-  background: #2c3e50;
+  background: var(--table-top-bg);
   border-radius: 8px;
   color: white;
   font-family: Arial, sans-serif;
@@ -213,6 +243,8 @@ button:active {
 
 input,
 textarea {
+  background-color: var(--textarea-background);
+  color: var(--text-body);
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
@@ -263,6 +295,12 @@ main Header
   top: 0;
   background-color: #2c3e50;
   padding: 1rem 2rem;
+  border-bottom: 3px solid var(--header-border);
+}
+#page-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #page-header nav ul {
@@ -301,6 +339,17 @@ main Header
   vertical-align: middle;
   border-radius: 6px;
 }
+#page-header nav .nav-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+#page-header nav .nav-button:hover {
+  background-color: #0f81f2;
+  text-decoration: underline;
+}
 
 /*
 Resume Header
@@ -309,9 +358,14 @@ Resume Header
 #page-header-resume {
   position: sticky;
   top: 0;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--resume-header-bg);
   padding: 1rem 2rem;
   border-bottom: 3px solid #3498db;
+}
+#page-header-resume nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #page-header-resume nav ul {
@@ -331,7 +385,9 @@ Resume Header
 
 #page-header-resume nav ul li a {
   text-decoration: none; /* remove underline */
-  color: #000000; /* light color for contrast with dark header */
+  color: var(
+    --resume-header-text
+  ); /* light color for contrast with dark header */
   font-weight: bold;
 }
 
@@ -346,11 +402,22 @@ Resume Header
   border-radius: 6px;
 }
 #page-header-resume nav a[aria-current="page"] {
-  color: #236896; /* active page color */
+  color: var(--resume-current-page); /* active page color */
   text-decoration: underline; /* underline active page */
 }
 #page-header-resume nav a[aria-current="page"]:hover {
-  color: #236896;
+  color: var(--resume-current-page);
+  text-decoration: underline;
+}
+#page-header-resume .nav-button {
+  background-color: #063655;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+#page-header-resume .nav-button:hover {
+  background-color: #0f81f2;
   text-decoration: underline;
 }
 
@@ -363,12 +430,12 @@ Projects Section
   border-radius: 8px;
   padding: 1rem;
   margin: 1rem;
-  background-color: #f9f9f9;
+  background-color: var(--card-background);
 }
 
 .project-card a {
   margin-top: 0;
-  color: black;
+  color: var(--text-heading);
   text-decoration: none;
 }
 
