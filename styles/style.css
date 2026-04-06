@@ -2,37 +2,37 @@
 /*
 Global Styles etc.
 */
+
+:root {
+  --text-body: #000;
+  --text-heading: #000;
+  --background: aliceblue;
+  --card-color: #f9f9f9;
+  --card-background: #f9f9f9;
+  --table-top-bg: #34495e;
+  --resume-header-bg: #ffffff;
+  --resume-header-text: #000000;
+  --resume-current-page: #236896;
+  --textarea-background: #fff;
+  --header-border: #34495e;
+}
+
+body.dark {
+  --text-body: #ecf0f1;
+  --text-heading: #ecf0f1;
+  --background: #2c3e50;
+  --card-color: #34495e;
+  --card-background: #34495e;
+  --color-slate-50: #798284;
+  --color-gray-500: #ffffff;
+  --table-top-bg: #0c2d4f;
+  --resume-header-bg: #2c3e50;
+  --resume-header-text: #ecf0f1;
+  --resume-current-page: #369de1;
+  --textarea-background: #45617c;
+  --header-border: #ffffff;
+}
 @layer base {
-  :root {
-    --text-body: #000;
-    --text-heading: #000;
-    --background: aliceblue;
-    --card-color: #f9f9f9;
-    --card-background: #f9f9f9;
-    --table-top-bg: #34495e;
-    --resume-header-bg: #ffffff;
-    --resume-header-text: #000000;
-    --resume-current-page: #236896;
-    --textarea-background: #fff;
-    --header-border: #34495e;
-  }
-
-  body.dark {
-    --text-body: #ecf0f1;
-    --text-heading: #ecf0f1;
-    --background: #2c3e50;
-    --card-color: #34495e;
-    --card-background: #34495e;
-    --color-slate-50: #798284;
-    --color-gray-500: #ffffff;
-    --table-top-bg: #0c2d4f;
-    --resume-header-bg: #2c3e50;
-    --resume-header-text: #ecf0f1;
-    --resume-current-page: #369de1;
-    --textarea-background: #45617c;
-    --header-border: #ffffff;
-  }
-
   html {
     margin: 0;
     padding: 0;
