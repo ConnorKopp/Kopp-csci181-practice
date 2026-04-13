@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Contact</title>
+    <title>Weather</title>
     <script src="./scripts/darkmode.js" defer></script>
+    <script src="./scripts/weather.js" defer></script>
   </head>
-
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header id="page-header">
@@ -21,30 +21,19 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-          <li><a href="weather.html">Weather</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="weather.html" aria-current="page">Weather</a></li>
         </ul>
         <button type="button" class="nav-button" id="dark-toggle">
           Dark Mode
         </button>
       </nav>
     </header>
-    <main id="main-content">
-      <h1>Contact Me</h1>
 
-      <form>
-        <label for="name">Name:</label><br />
-        <input type="text" id="name" name="name" /><br /><br />
-
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" /><br /><br />
-
-        <label for="message">Message:</label><br />
-        <textarea id="message" name="message" rows="4" cols="50"></textarea
-        ><br /><br />
-
-        <input type="submit" value="Submit" />
-      </form>
+    <main id="weather-main">
+      <h1>Missoula Weather</h1>
+      <div id="weather-output">&deg;</div>
+      <div id="Weather-disc"></div>
     </main>
   </body>
 </html>
